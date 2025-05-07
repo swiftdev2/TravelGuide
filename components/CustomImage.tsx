@@ -96,7 +96,7 @@ export function CustomImage({
           src={getImageSource()}
           alt={alt}
           fill
-          priority
+          {...(priority && { priority })}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={90}
           onLoad={() => setLoading(false)}

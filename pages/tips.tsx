@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Container, Title, Text, Paper, Stack, SimpleGrid, Card, Box, rem } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { motion, useScroll } from 'framer-motion';
+import { useViewportSize, useMediaQuery } from '@mantine/hooks';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { CustomImage } from '../components/CustomImage';
 
 const HeroSection = () => {
