@@ -1,10 +1,9 @@
 import { Container, Title, Text, Paper, Stack, SimpleGrid, Card, Box, rem } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { CustomImage } from '../components/CustomImage';
 
 const HeroSection = () => {
-  const { scrollYProgress } = useScroll();
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (

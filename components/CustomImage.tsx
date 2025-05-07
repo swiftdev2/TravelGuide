@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Skeleton, Text, Box, Transition } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import NextImage from 'next/image';
