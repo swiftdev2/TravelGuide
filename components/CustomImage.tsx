@@ -54,7 +54,7 @@ export function CustomImage({
     <Box 
       style={{ 
         position: 'relative', 
-        height: height, 
+        height,
         width: width || '100%',
         overflow: 'hidden',
         borderRadius: 'inherit',
