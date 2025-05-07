@@ -1,5 +1,4 @@
-import { Container, Title, Text, Paper, Stack, List, ThemeIcon, Group } from '@mantine/core';
-import { IconCheck, IconAlertCircle } from '@tabler/icons-react';
+import { Container, Title, Text, Paper, Stack, List } from '@mantine/core';
 
 export default function Essentials() {
   return (
