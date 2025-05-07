@@ -1,5 +1,5 @@
 import { Container, Title, Text, Paper, Stack, SimpleGrid, Card, Box, rem } from '@mantine/core';
-import { useViewportSize, useMediaQuery } from '@mantine/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { CustomImage } from '../components/CustomImage';
 
@@ -242,10 +242,6 @@ const practicalTips = [
 ];
 
 export default function Tips() {
-  const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   const containerVariants = {

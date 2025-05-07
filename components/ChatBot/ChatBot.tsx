@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { ActionIcon, Paper, TextInput, Group, Text, Stack, ScrollArea, Box, Transition, rem } from '@mantine/core';
+import { ActionIcon, Paper, TextInput, Group, Text, Stack, ScrollArea, Box } from '@mantine/core';
 import { IconMessageCircle, IconSend, IconX } from '@tabler/icons-react';
 import { useMediaQuery } from '@mantine/hooks';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -69,7 +69,9 @@ export function ChatBot() {
   }, [opened]);
 
   const handleSend = () => {
-    if (!input.trim()) return;
+    if (!input.trim()){
+      return;
+    } 
 
     const userMessage: Message = {
       id: Date.now().toString(),

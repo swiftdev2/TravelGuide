@@ -1,7 +1,6 @@
-import { AppShell, Text, Group, ActionIcon, useMantineTheme, Box, rem, Burger, Transition, Paper } from '@mantine/core';
+import { AppShell, Text, Group, ActionIcon, useMantineTheme, Box, Burger, Paper, useMantineColorScheme } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons-react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { useMantineColorScheme } from '@mantine/core';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
