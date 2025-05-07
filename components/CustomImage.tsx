@@ -92,11 +92,11 @@ export function CustomImage({
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         }}
       >
-        {/* eslint-disable-next-line object-shorthand */}
         <NextImage
           src={getImageSource()}
           alt={alt}
-          fill
+          width={width || 400}
+          height={height}
           priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={90}
@@ -108,14 +108,9 @@ export function CustomImage({
           style={{
             objectFit: 'cover',
             borderRadius: 'inherit',
+            width: '100%',
+            height: '100%',
           }}
-          placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
-            `<svg width="${width || 400}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-              <rect width="100%" height="100%" fill="#2C2A2A"/>
-              <text x="50%" y="50%" font-family="Arial" font-size="14" fill="#FFC300" text-anchor="middle" dy=".3em">${alt}</text>
-            </svg>`
-          ).toString('base64')}`}
         />
       </Box>
       

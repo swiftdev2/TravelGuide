@@ -10,8 +10,7 @@ const HeroSection = () => {
   return (
     <motion.div
       style={{
-        position: 'sticky',
-        top: 0,
+        position: 'relative',
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -191,25 +190,25 @@ const moneySavingTips = [
   {
     title: 'Transportation',
     description: 'Use public buses or group taxis for cost-effective travel',
-    image: 'https://images.pexels.com/photos/2996106/pexels-photo-2996106.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-orange-9)',
   },
   {
     title: 'Dining',
     description: 'Local restaurants offer better value than tourist spots',
-    image: 'https://images.pexels.com/photos/6267516/pexels-photo-6267516.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-pink-9)',
   },
   {
     title: 'Shopping',
     description: 'Visit traditional souks for authentic goods at better prices',
-    image: 'https://images.pexels.com/photos/4553031/pexels-photo-4553031.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-violet-9)',
   },
   {
     title: 'Accommodation',
     description: 'Book in advance and consider apartments for longer stays',
-    image: 'https://images.pexels.com/photos/6782567/pexels-photo-6782567.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-cyan-9)',
   },
 ];
@@ -218,25 +217,25 @@ const practicalTips = [
   {
     title: 'Health & Safety',
     description: 'Drink bottled water. Keep emergency numbers handy',
-    image: 'https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-teal-9)',
   },
   {
     title: 'Internet & Communication',
     description: 'Free WiFi in malls and cafes. Local SIM cards available',
-    image: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-indigo-9)',
   },
   {
     title: 'Weather',
     description: 'Hot summers, mild winters. Best time to visit: October to April',
-    image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-lime-9)',
   },
   {
     title: 'Emergency Contacts',
     description: 'Police: 999, Ambulance: 998, Fire: 997',
-    image: 'https://images.pexels.com/photos/3856050/pexels-photo-3856050.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1200',
     color: 'var(--mantine-color-grape-9)',
   },
 ];
@@ -309,434 +308,435 @@ export default function Tips() {
   return (
     <Box>
       <HeroSection />
-
-      <Container size="lg" py={isMobile ? "md" : "xl"}>
-        <Stack gap={isMobile ? "lg" : "xl"}>
-          {/* Cultural Tips Section */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            <Paper
-              p={isMobile ? "md" : "xl"}
-              radius="md"
-              style={{
-                background: 'linear-gradient(45deg, #000000, #1a1a1a)',
-                color: '#ffffff',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
+      <Box style={{ position: 'relative', zIndex: 2, background: '#000000' }}>
+        <Container size="lg" py={isMobile ? "md" : "xl"}>
+          <Stack gap={isMobile ? "lg" : "xl"}>
+            {/* Cultural Tips Section */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={containerVariants}
             >
-              <motion.div
-                animate={{
-                  background: [
-                    'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
-                    'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
-                  ],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
+              <Paper
+                p={isMobile ? "md" : "xl"}
+                radius="md"
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  zIndex: 0,
-                }}
-              />
-              <Title
-                order={2}
-                mb={isMobile ? "md" : "xl"}
-                style={{
-                  background: 'linear-gradient(45deg, #ffffff, #cccccc)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  background: 'linear-gradient(45deg, #000000, #1a1a1a)',
+                  color: '#ffffff',
                   position: 'relative',
-                  zIndex: 1,
-                  fontSize: isMobile ? rem(24) : undefined,
+                  overflow: 'hidden',
                 }}
               >
-                Cultural Insights
-              </Title>
-              <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
-                {culturalTips.map((tip, index) => (
-                  <motion.div
-                    key={tip.title}
-                    variants={cardVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    whileHover="hover"
-                    viewport={{ once: true, amount: 0.3 }}
-                    style={{
-                      perspective: 1000
-                    }}
-                  >
-                    <Card
-                      shadow="xl"
-                      padding={isMobile ? "md" : "xl"}
-                      radius="md"
+                <motion.div
+                  animate={{
+                    background: [
+                      'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
+                      'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
+                    ],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 0,
+                  }}
+                />
+                <Title
+                  order={2}
+                  mb={isMobile ? "md" : "xl"}
+                  style={{
+                    background: 'linear-gradient(45deg, #ffffff, #cccccc)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    position: 'relative',
+                    zIndex: 1,
+                    fontSize: isMobile ? rem(24) : undefined,
+                  }}
+                >
+                  Cultural Insights
+                </Title>
+                <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
+                  {culturalTips.map((tip, index) => (
+                    <motion.div
+                      key={tip.title}
+                      variants={cardVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      whileHover="hover"
+                      viewport={{ once: true, amount: 0.3 }}
                       style={{
-                        background: tip.color,
-                        height: '100%',
-                        position: 'relative',
-                        overflow: 'hidden',
-                        transformStyle: 'preserve-3d'
+                        perspective: 1000
                       }}
                     >
-                      <motion.div
-                        animate={{
-                          background: [
-                            'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
-                            'radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
-                            'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
-                          ],
-                        }}
-                        transition={{
-                          duration: 5,
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                        }}
+                      <Card
+                        shadow="xl"
+                        padding={isMobile ? "md" : "xl"}
+                        radius="md"
                         style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          zIndex: 0,
+                          background: tip.color,
+                          height: '100%',
+                          position: 'relative',
+                          overflow: 'hidden',
+                          transformStyle: 'preserve-3d'
                         }}
-                        className="card-shine"
-                      />
-                      <Card.Section>
+                      >
                         <motion.div
-                          variants={imageVariants}
-                          style={{
-                            overflow: 'hidden'
+                          animate={{
+                            background: [
+                              'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
+                              'radial-gradient(circle at 70% 70%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
+                              'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%)',
+                            ],
                           }}
-                        >
-                          <CustomImage
-                            src={tip.image}
-                            alt={tip.title}
-                            height={isMobile ? 200 : 300}
-                            fallbackText={`Image for ${tip.title}`}
-                          />
-                        </motion.div>
-                      </Card.Section>
+                          transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                          }}
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            zIndex: 0,
+                          }}
+                          className="card-shine"
+                        />
+                        <Card.Section>
+                          <motion.div
+                            variants={imageVariants}
+                            style={{
+                              overflow: 'hidden'
+                            }}
+                          >
+                            <CustomImage
+                              src={tip.image}
+                              alt={tip.title}
+                              height={isMobile ? 200 : 300}
+                              fallbackText={`Image for ${tip.title}`}
+                            />
+                          </motion.div>
+                        </Card.Section>
 
-                      <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
-                        <motion.div
-                          initial={{ x: -50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                        >
-                          <Title order={3} style={{ 
-                            color: '#ffffff',
-                            textShadow: '0 2px 4px rgba(0,0,0,0.2)',
-                            fontSize: isMobile ? rem(18) : undefined,
-                          }}>
-                            {tip.title}
-                          </Title>
-                        </motion.div>
-                        <motion.div
-                          initial={{ x: 50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 + 0.2 }}
-                        >
-                          <Text size={isMobile ? "sm" : "lg"} style={{ 
-                            color: '#ffffff',
-                            textShadow: '0 1px 2px rgba(0,0,0,0.2)'
-                          }}>
-                            {tip.description}
-                          </Text>
-                        </motion.div>
-                      </Stack>
-                    </Card>
-                  </motion.div>
-                ))}
-              </SimpleGrid>
-            </Paper>
-          </motion.div>
+                        <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
+                          <motion.div
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                          >
+                            <Title order={3} style={{ 
+                              color: '#ffffff',
+                              textShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                              fontSize: isMobile ? rem(18) : undefined,
+                            }}>
+                              {tip.title}
+                            </Title>
+                          </motion.div>
+                          <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 + 0.2 }}
+                          >
+                            <Text size={isMobile ? "sm" : "lg"} style={{ 
+                              color: '#ffffff',
+                              textShadow: '0 1px 2px rgba(0,0,0,0.2)'
+                            }}>
+                              {tip.description}
+                            </Text>
+                          </motion.div>
+                        </Stack>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </SimpleGrid>
+              </Paper>
+            </motion.div>
 
-          {/* Money Saving Tips Section */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            <Paper
-              p={isMobile ? "md" : "xl"}
-              radius="md"
-              style={{
-                background: 'linear-gradient(45deg, #1a1a1a, #000000)',
-                color: '#ffffff',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
+            {/* Money Saving Tips Section */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={containerVariants}
             >
-              <motion.div
-                animate={{
-                  background: [
-                    'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
-                    'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
-                  ],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
+              <Paper
+                p={isMobile ? "md" : "xl"}
+                radius="md"
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  zIndex: 0,
-                }}
-              />
-              <Title
-                order={2}
-                mb={isMobile ? "md" : "xl"}
-                style={{
-                  background: 'linear-gradient(45deg, #ffffff, #cccccc)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  background: 'linear-gradient(45deg, #1a1a1a, #000000)',
+                  color: '#ffffff',
                   position: 'relative',
-                  zIndex: 1,
-                  fontSize: isMobile ? rem(24) : undefined,
+                  overflow: 'hidden',
                 }}
               >
-                Smart Travel
-              </Title>
-              <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
-                {moneySavingTips.map((tip, index) => (
-                  <motion.div
-                    key={tip.title}
-                    variants={itemVariants}
-                    whileHover={{ 
-                      scale: 1.05,
-                      rotate: [0, 1, -1, 1, 0],
-                      transition: { duration: 0.5 }
-                    }}
-                  >
-                    <Card
-                      shadow="xl"
-                      padding={isMobile ? "md" : "xl"}
-                      radius="md"
-                      style={{
-                        background: tip.color,
-                        height: '100%',
-                        position: 'relative',
-                        overflow: 'hidden',
+                <motion.div
+                  animate={{
+                    background: [
+                      'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
+                      'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
+                    ],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 0,
+                  }}
+                />
+                <Title
+                  order={2}
+                  mb={isMobile ? "md" : "xl"}
+                  style={{
+                    background: 'linear-gradient(45deg, #ffffff, #cccccc)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    position: 'relative',
+                    zIndex: 1,
+                    fontSize: isMobile ? rem(24) : undefined,
+                  }}
+                >
+                  Smart Travel
+                </Title>
+                <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
+                  {moneySavingTips.map((tip, index) => (
+                    <motion.div
+                      key={tip.title}
+                      variants={itemVariants}
+                      whileHover={{ 
+                        scale: 1.05,
+                        rotate: [0, 1, -1, 1, 0],
+                        transition: { duration: 0.5 }
                       }}
                     >
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.1, 1],
-                        }}
-                        transition={{
-                          duration: 5,
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                        }}
+                      <Card
+                        shadow="xl"
+                        padding={isMobile ? "md" : "xl"}
+                        radius="md"
                         style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          background: 'radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
-                          zIndex: 0,
+                          background: tip.color,
+                          height: '100%',
+                          position: 'relative',
+                          overflow: 'hidden',
                         }}
-                      />
-                      <Card.Section>
+                      >
                         <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <CustomImage
-                            src={tip.image}
-                            alt={tip.title}
-                            height={isMobile ? 200 : 300}
-                            fallbackText={`Image for ${tip.title}`}
-                          />
-                        </motion.div>
-                      </Card.Section>
+                          animate={{
+                            scale: [1, 1.1, 1],
+                          }}
+                          transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                          }}
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
+                            zIndex: 0,
+                          }}
+                        />
+                        <Card.Section>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <CustomImage
+                              src={tip.image}
+                              alt={tip.title}
+                              height={isMobile ? 200 : 300}
+                              fallbackText={`Image for ${tip.title}`}
+                            />
+                          </motion.div>
+                        </Card.Section>
 
-                      <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
-                        <motion.div
-                          initial={{ x: -50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                        >
-                          <Title order={3} style={{ 
-                            color: '#ffffff',
-                            fontSize: isMobile ? rem(18) : undefined,
-                          }}>
-                            {tip.title}
-                          </Title>
-                        </motion.div>
-                        <motion.div
-                          initial={{ x: 50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 + 0.2 }}
-                        >
-                          <Text size={isMobile ? "sm" : "lg"} style={{ color: '#ffffff' }}>
-                            {tip.description}
-                          </Text>
-                        </motion.div>
-                      </Stack>
-                    </Card>
-                  </motion.div>
-                ))}
-              </SimpleGrid>
-            </Paper>
-          </motion.div>
+                        <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
+                          <motion.div
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                          >
+                            <Title order={3} style={{ 
+                              color: '#ffffff',
+                              fontSize: isMobile ? rem(18) : undefined,
+                            }}>
+                              {tip.title}
+                            </Title>
+                          </motion.div>
+                          <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 + 0.2 }}
+                          >
+                            <Text size={isMobile ? "sm" : "lg"} style={{ color: '#ffffff' }}>
+                              {tip.description}
+                            </Text>
+                          </motion.div>
+                        </Stack>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </SimpleGrid>
+              </Paper>
+            </motion.div>
 
-          {/* Practical Tips Section */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            <Paper
-              p={isMobile ? "md" : "xl"}
-              radius="md"
-              style={{
-                background: 'linear-gradient(45deg, #000000, #1a1a1a)',
-                color: '#ffffff',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
+            {/* Practical Tips Section */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={containerVariants}
             >
-              <motion.div
-                animate={{
-                  background: [
-                    'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
-                    'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
-                  ],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
+              <Paper
+                p={isMobile ? "md" : "xl"}
+                radius="md"
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  zIndex: 0,
-                }}
-              />
-              <Title
-                order={2}
-                mb={isMobile ? "md" : "xl"}
-                style={{
-                  background: 'linear-gradient(45deg, #ffffff, #cccccc)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                  background: 'linear-gradient(45deg, #000000, #1a1a1a)',
+                  color: '#ffffff',
                   position: 'relative',
-                  zIndex: 1,
-                  fontSize: isMobile ? rem(24) : undefined,
+                  overflow: 'hidden',
                 }}
               >
-                Essential Knowledge
-              </Title>
-              <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
-                {practicalTips.map((tip, index) => (
-                  <motion.div
-                    key={tip.title}
-                    variants={itemVariants}
-                    whileHover={{ 
-                      scale: 1.05,
-                      rotate: [0, -1, 1, -1, 0],
-                      transition: { duration: 0.5 }
-                    }}
-                  >
-                    <Card
-                      shadow="xl"
-                      padding={isMobile ? "md" : "xl"}
-                      radius="md"
-                      style={{
-                        background: tip.color,
-                        height: '100%',
-                        position: 'relative',
-                        overflow: 'hidden',
+                <motion.div
+                  animate={{
+                    background: [
+                      'linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0))',
+                      'linear-gradient(45deg, rgba(255,255,255,0), rgba(255,255,255,0.1))',
+                    ],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    zIndex: 0,
+                  }}
+                />
+                <Title
+                  order={2}
+                  mb={isMobile ? "md" : "xl"}
+                  style={{
+                    background: 'linear-gradient(45deg, #ffffff, #cccccc)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    position: 'relative',
+                    zIndex: 1,
+                    fontSize: isMobile ? rem(24) : undefined,
+                  }}
+                >
+                  Essential Knowledge
+                </Title>
+                <SimpleGrid cols={{ base: 1, sm: 2, md: 2, lg: 2 }} spacing={isMobile ? "md" : "xl"}>
+                  {practicalTips.map((tip, index) => (
+                    <motion.div
+                      key={tip.title}
+                      variants={itemVariants}
+                      whileHover={{ 
+                        scale: 1.05,
+                        rotate: [0, -1, 1, -1, 0],
+                        transition: { duration: 0.5 }
                       }}
                     >
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.1, 1],
-                        }}
-                        transition={{
-                          duration: 5,
-                          repeat: Infinity,
-                          repeatType: "reverse",
-                        }}
+                      <Card
+                        shadow="xl"
+                        padding={isMobile ? "md" : "xl"}
+                        radius="md"
                         style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          right: 0,
-                          bottom: 0,
-                          background: 'radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
-                          zIndex: 0,
+                          background: tip.color,
+                          height: '100%',
+                          position: 'relative',
+                          overflow: 'hidden',
                         }}
-                      />
-                      <Card.Section>
+                      >
                         <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <CustomImage
-                            src={tip.image}
-                            alt={tip.title}
-                            height={isMobile ? 200 : 300}
-                            fallbackText={`Image for ${tip.title}`}
-                          />
-                        </motion.div>
-                      </Card.Section>
+                          animate={{
+                            scale: [1, 1.1, 1],
+                          }}
+                          transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                          }}
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
+                            zIndex: 0,
+                          }}
+                        />
+                        <Card.Section>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <CustomImage
+                              src={tip.image}
+                              alt={tip.title}
+                              height={isMobile ? 200 : 300}
+                              fallbackText={`Image for ${tip.title}`}
+                            />
+                          </motion.div>
+                        </Card.Section>
 
-                      <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
-                        <motion.div
-                          initial={{ x: -50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                        >
-                          <Title order={3} style={{ 
-                            color: '#ffffff',
-                            fontSize: isMobile ? rem(18) : undefined,
-                          }}>
-                            {tip.title}
-                          </Title>
-                        </motion.div>
-                        <motion.div
-                          initial={{ x: 50, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.1 + 0.2 }}
-                        >
-                          <Text size={isMobile ? "sm" : "lg"} style={{ color: '#ffffff' }}>
-                            {tip.description}
-                          </Text>
-                        </motion.div>
-                      </Stack>
-                    </Card>
-                  </motion.div>
-                ))}
-              </SimpleGrid>
-            </Paper>
-          </motion.div>
-        </Stack>
-      </Container>
+                        <Stack mt={isMobile ? "sm" : "md"} gap={isMobile ? "sm" : "md"} style={{ position: 'relative', zIndex: 1 }}>
+                          <motion.div
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                          >
+                            <Title order={3} style={{ 
+                              color: '#ffffff',
+                              fontSize: isMobile ? rem(18) : undefined,
+                            }}>
+                              {tip.title}
+                            </Title>
+                          </motion.div>
+                          <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.1 + 0.2 }}
+                          >
+                            <Text size={isMobile ? "sm" : "lg"} style={{ color: '#ffffff' }}>
+                              {tip.description}
+                            </Text>
+                          </motion.div>
+                        </Stack>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </SimpleGrid>
+              </Paper>
+            </motion.div>
+          </Stack>
+        </Container>
+      </Box>
     </Box>
   );
 } 
