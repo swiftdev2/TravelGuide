@@ -1,5 +1,5 @@
 import { AppShell, Text, Group, ActionIcon, useMantineTheme, Box, rem, Burger, Transition, Paper } from '@mantine/core';
-import { IconSun, IconMoonStars, IconMenu2 } from '@tabler/icons-react';
+import { IconSun, IconMoonStars } from '@tabler/icons-react';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { useMantineColorScheme } from '@mantine/core';
 import Link from 'next/link';

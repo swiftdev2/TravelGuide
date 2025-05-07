@@ -192,7 +192,7 @@ export function ChatBot() {
                   scrollbarSize={8}
                   ref={scrollRef}
                   viewportRef={scrollRef}
-                  onScrollPositionChange={({ y }) => {
+                  onScrollPositionChange={() => {
                     // Optional: Add any scroll position tracking logic here
                   }}
                 >

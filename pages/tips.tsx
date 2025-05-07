@@ -1,20 +1,15 @@
-import { Container, Title, Text, Paper, Stack, SimpleGrid, Card, Group, Badge, Box, rem } from '@mantine/core';
-import { useScrollIntoView, useViewportSize, useMediaQuery } from '@mantine/hooks';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { Container, Title, Text, Paper, Stack, SimpleGrid, Card, Box, rem } from '@mantine/core';
+import { useViewportSize, useMediaQuery } from '@mantine/hooks';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { CustomImage } from '../components/CustomImage';
 
 const HeroSection = () => {
-  const { height } = useViewportSize();
   const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
     <motion.div
       style={{
-        opacity,
-        scale,
         position: 'sticky',
         top: 0,
         height: '100vh',

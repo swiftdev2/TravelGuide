@@ -22,7 +22,9 @@ export default function Game() {
   // Initialize canvas
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
 
     const updateCanvasSize = () => {
       const rect = canvas.getBoundingClientRect();
@@ -37,10 +39,14 @@ export default function Game() {
 
   // Game loop
   useEffect(() => {
-    if (!gameStarted || gameOver) return;
+    if (!gameStarted || gameOver) {
+      return;
+    }
 
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
 
     const gameLoop = () => {
       if (!currentDuck) {
@@ -82,9 +88,13 @@ export default function Game() {
   // Draw the game
   const drawGame = () => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!ctx) {
+      return;
+    }
 
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -137,10 +147,14 @@ export default function Game() {
 
   // Handle canvas click
   const handleCanvasClick = () => {
-    if (!gameStarted || gameOver || !currentDuck) return;
+    if (!gameStarted || gameOver || !currentDuck) {
+      return;
+    }
 
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+      return;
+    }
 
     const lastDuck = stack[stack.length - 1];
     
