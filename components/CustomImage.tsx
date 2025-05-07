@@ -92,11 +92,12 @@ export function CustomImage({
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         }}
       >
+        {/* eslint-disable-next-line object-shorthand */}
         <NextImage
           src={getImageSource()}
           alt={alt}
           fill
-          {...(priority && { priority })}
+          priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={90}
           onLoad={() => setLoading(false)}
