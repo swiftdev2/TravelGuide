@@ -1,11 +1,19 @@
-import { Head, Html, Main, NextScript } from 'next/document';
-import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en" {...mantineHtmlProps}>
+    <Html lang="en">
       <Head>
-        <ColorSchemeScript />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <style>{`
+          :root {
+            --mantine-font-family: 'Nunito', sans-serif;
+            --mantine-heading-font-family: 'Amiri', serif;
+          }
+        `}</style>
       </Head>
       <body>
         <Main />
